@@ -12,6 +12,7 @@ from os.path import basename
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+matplotlib.use('agg',warn=False, force=True)
 
 
 # Configure logging
