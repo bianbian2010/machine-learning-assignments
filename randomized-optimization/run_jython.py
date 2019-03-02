@@ -38,19 +38,19 @@ def shutdown_and_await_termination(pool, timeout):
 
 pool = Executors.newWorkStealingPool()
 
-TEST_CULLED = 'data/{}_test.csv'.format('Culled')
-TRAIN_CULLED = 'data/{}_train.csv'.format('Culled')
-VALIDATE_CULLED = 'data/{}_validate.csv'.format('Culled')
+TEST_CULLED = 'data/{}_test.csv'.format('CreditDefaultData')
+TRAIN_CULLED = 'data/{}_train.csv'.format('CreditDefaultData')
+VALIDATE_CULLED = 'data/{}_validate.csv'.format('CreditDefaultData')
 
-TEST_VEHICLE = 'data/{}_test.csv'.format('Vehicle')
-TRAIN_VEHICLE = 'data/{}_train.csv'.format('Vehicle')
-VALIDATE_VEHICLE = 'data/{}_validate.csv'.format('Vehicle')
+TEST_VEHICLE = 'data/{}_test.csv'.format('PendDigitData')
+TRAIN_VEHICLE = 'data/{}_train.csv'.format('PendDigitData')
+VALIDATE_VEHICLE = 'data/{}_validate.csv'.format('PendDigitData')
 
 experiment_data = [
     #([INPUT_LAYER, HIDDEN_LAYER1, ..., OUTPUT_LAYER], max iterations, test, train, validate, name)
     # OUTPUT should be 1 otherwise you get an index out of bounds error
-    ([32, 32, 32, 1], 5001, TEST_CULLED, TRAIN_CULLED, VALIDATE_CULLED, 'Culled'),
-    ([18, 18, 1], 5001, TEST_VEHICLE, TRAIN_VEHICLE, VALIDATE_VEHICLE, 'Vehicle')
+    ([23, 36, 36, 1], 5001, TEST_CULLED, TRAIN_CULLED, VALIDATE_CULLED, 'CreditDefaultData'),
+    ([16, 16, 16, 1], 5001, TEST_VEHICLE, TRAIN_VEHICLE, VALIDATE_VEHICLE, 'PendDigitData')
     ]
 rhc_args = [data for data in experiment_data]
 print "RHC {}".format(len(rhc_args))

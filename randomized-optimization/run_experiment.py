@@ -67,26 +67,26 @@ if __name__ == '__main__':
         #     'readable_name': 'Credit Approval',
         # },
         # {
-        #     'data': loader.PenDigitData(verbose=verbose, seed=seed),
-        #     'name': 'pen_digits',
-        #     'readable_name': 'Handwritten Digits',
-        # }
-        # {
         #     'data': loader.SpamData(verbose=verbose, seed=seed),
         #     'name': 'spam',
         #     'readable_name': 'Spam',
         # },
-        # {
-        #     'data': loader.CreditDefaultData(verbose=verbose, seed=seed),
-        #     'name': 'credit_default',
-        #     'readable_name': 'Credit Default',
-        # },
         {
-            'data': loader.StatlogVehicleData(verbose=verbose, seed=seed),
-            'name': 'statlog_vehicle_data',
-            'best_params': None,
-            'readable_name': 'Statlog Vehicle Data',
+            'data': loader.CreditDefaultData(verbose=verbose, seed=seed),
+            'name': 'credit_default',
+            'readable_name': 'Credit Default',
         },
+        {
+            'data': loader.PenDigitData(verbose=verbose, seed=seed),
+            'name': 'pen_digits',
+            'readable_name': 'Handwritten Digits',
+        }
+        # {
+        #     'data': loader.StatlogVehicleData(verbose=verbose, seed=seed),
+        #     'name': 'statlog_vehicle_data',
+        #     'best_params': None,
+        #     'readable_name': 'Statlog Vehicle Data',
+        # },
         # {
         #     'data': loader.WineData(verbose=verbose, seed=seed),
         #     'name': 'wine_quality',
@@ -111,12 +111,12 @@ if __name__ == '__main__':
         #     'best_params': None,
         #     'readable_name': 'Madelon',
         # },
-        {
-            'data': loader.MadelonCulled(verbose=verbose, seed=seed),
-            'name': 'madelon_culled',
-            'best_params': None,
-            'readable_name': 'Madelon Culled',
-        }
+        # {
+        #     'data': loader.MadelonCulled(verbose=verbose, seed=seed),
+        #     'name': 'madelon_culled',
+        #     'best_params': None,
+        #     'readable_name': 'Madelon Culled',
+        # }
     ]
 
     experiment_details = []
